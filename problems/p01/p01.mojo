@@ -2,6 +2,7 @@ from memory import UnsafePointer
 from gpu import thread_idx
 from gpu.host import DeviceContext
 from testing import assert_equal
+from layout import Layout, LayoutTensor
 
 # ANCHOR: add_10
 comptime SIZE = 4
@@ -15,8 +16,7 @@ fn add_10(
     a: UnsafePointer[Scalar[dtype], MutAnyOrigin],
 ):
     i = thread_idx.x
-    # FILL ME IN (roughly 1 line)
-
+    output[] = a[i] + 10
 
 # ANCHOR_END: add_10
 
