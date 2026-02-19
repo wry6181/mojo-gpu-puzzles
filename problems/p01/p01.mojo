@@ -16,7 +16,7 @@ fn add_10(
     a: UnsafePointer[Scalar[dtype], MutAnyOrigin],
 ):
     i = thread_idx.x
-    output[] = a[i] + 10
+    output[i] = a[i] + 10
 
 # ANCHOR_END: add_10
 

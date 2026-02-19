@@ -31,7 +31,8 @@ fn add_10_shared(
     # wait for all threads to complete
     # works within a thread block
     barrier()
-
+    if global_i < size: 
+        output[global_i] = shared[local_i] + 10
     # FILL ME IN (roughly 2 lines)
 
 
